@@ -2,19 +2,19 @@
 
 
 @font-face {
-	font-family: 'River-City-Leather';
-	src:url('../fonts/River-City-Leather.eot');
-	src:url('../fonts/River-City-Leather.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/River-City-Leather.woff') format('woff'),
-		url('../fonts/River-City-Leather.ttf') format('truetype'),
-		url('../fonts/River-City-Leather.svg#River-City-Leather') format('svg');
+	font-family: 'Digital-Frontiersman';
+	src:url('../fonts/Digital-Frontiersman.eot');
+	src:url('../fonts/Digital-Frontiersman.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Digital-Frontiersman.woff') format('woff'),
+		url('../fonts/Digital-Frontiersman.ttf') format('truetype'),
+		url('../fonts/Digital-Frontiersman.svg#Digital-Frontiersman') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
-	font-family: 'River-City-Leather';
+	font-family: 'Digital-Frontiersman';
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;
@@ -31,7 +31,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 .icon-facebook, .icon-twitter, .icon-tumblr, .icon-pinterest, .icon-instagram, .icon-arrow-down, .icon-arrow-up {
-	font-family: 'River-City-Leather';
+	font-family: 'Digital-Frontiersman';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -143,26 +143,9 @@ p.intro{
 
 }
 
-p.subtitle{
-text-align:center;
-display:block;
-font-size: 1em;
-font-weight:300;
-text-align:center;
-text-transform:uppercase;
-letter-spacing:.2em;
-margin:2em auto 0 auto;
-padding:.8em;
-
-
-	>strong{
-	font-weight:800;
-	}
-
-}
 
 strong{
-font-weight:800;
+
 }
 
 small{
@@ -170,31 +153,6 @@ small{
 }
 
 
-
-a{
-	text-decoration:none;
-	color:$black;
-}
-
-article a{
-	border-bottom:1px dotted $black;
-	color: $black;
-	display:inline-block;
-	padding: 0;
-
-	&:hover{
-		color:$black;
-		border:none;
-		border-bottom:1px dotted $black;
-	}
-
-	&:active{
-		background-color:$tan;
-		color:$white;
-		border-bottom:1px dotted $black;
-	}
-
-}
 
 blockquote{
 	font-style:italic; 
@@ -204,7 +162,6 @@ blockquote{
 	font-family:"chaparral-pro", serif; 
 	font-style:italic; 
 	font-weight:400; 
-	border-left: 1px dotted $light-neutral; 
 	padding: 0 0 0 2em; 
 	margin: 2em 0 2em;
 
@@ -218,7 +175,7 @@ blockquote:before{
 	font-family:"chaparral-pro", serif;
 	content:"\201c";
 	font-size:5em;
-	color:$light-neutral;
+
 	text-indent:-1.25em;
 	margin-top:.25em;
 	float:left;
