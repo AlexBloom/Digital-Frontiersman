@@ -29,7 +29,7 @@
 		position:absolute;
 		top:0;
 		bottom:0;
-		left:0;
+		left:-2em;
 		//float:left;
 		width:50%;
 		height:100%;
@@ -39,10 +39,70 @@
 		position:absolute;
 		top:0;
 		bottom:0;
-		right:0;
+		right:-2em;
 		//float:left;
 		width:50%;
 		height:100%;
 	}
+
+}
+
+
+// Responsive Nav Styles
+
+/*! responsive-nav.js v1.0.15 by @viljamis */
+
+//#nav ul {
+//  margin: 0;
+//  padding: 0;
+//  width: 100%;
+//  display: block;
+//  list-style: none;
+//}
+//
+//#nav li {
+//  width: 100%;
+//  display: block;
+//}
+
+.js #info-1 {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+#info-1.opened {
+  max-height: 9999px;
+  padding:0 0 6em 0;
+}
+
+.expand {
+  color: white;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+a.closed {
+  
+}
+
+a.opened {
+	display:block;
+	font-size:1.1em;
+	/* Safari */
+	-webkit-transform: rotate(-45deg);
+
+	/* Firefox */
+	-moz-transform: rotate(-45deg);
+
+	/* IE */
+	-ms-transform: rotate(-45deg);
+
+	/* Opera */
+	-o-transform: rotate(-45deg);
 
 }

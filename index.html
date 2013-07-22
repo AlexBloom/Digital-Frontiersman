@@ -56,9 +56,9 @@
 
                     <!-- Energy Realities -->
                     <li class="project">   	
-						<h2> National Geographic &mdash; Energy Realities  <span class="expand"> <a id="toggle-info"> + </a> </span> </h2>
+						<h2> National Geographic &mdash; Energy Realities  <span class="expand"> <a id="toggle" class="closed"> + </a> </span> </h2>
 						
-						<div class="project-info">
+						<div id="info-1" class="project-info">
 							<p> Website for National Geographic and Statoil about global energy consumption and production. Produced while working at Bluecadet. </p>
 							<h3> Roles </h3>
                             <ul class="project-details clearfix">
@@ -262,6 +262,11 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 		
 		<script src="js/swipe.js"></script>
+		<script src="js/responsive-nav.min.js"></script>
+		
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+		
 		<script>
 
 		// pure JS
@@ -280,9 +285,23 @@
 		// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
 
 		</script>
+		
+		
+	    <script>
+	      var navigation = responsiveNav("#info-1", {
+	        customToggle: "#toggle",
+	        open: function () {
+	          var toggle = document.getElementById("toggle");
+	          toggle.className = toggle.className.replace(/(^|\s)closed(\s|$)/, "opened");
+	        },
+	        close: function () {
+	          var toggle = document.getElementById("toggle");
+	          toggle.className = toggle.className.replace(/(^|\s)opened(\s|$)/, "closed");
+	        }
+	      });
+	    </script>
 
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
