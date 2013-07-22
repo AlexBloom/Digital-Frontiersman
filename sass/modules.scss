@@ -1,1 +1,48 @@
 // MODULES
+
+// Swipe Classes
+
+.swipe {
+  overflow:hidden;
+  visibility:hidden;
+  position:relative;
+}
+.swipe-wrap {
+  overflow:hidden;
+  position:relative;
+}
+.swipe-wrap > div {
+  position:relative;
+  float:left;
+  width:100%;
+}
+
+.nontouchnav{
+	position:absolute;
+	bottom:0;
+	top:0;
+	width:100%;
+	z-index:1000;
+	text-align:center;
+
+	.prev{
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		//float:left;
+		width:50%;
+		height:100%;
+	}
+	
+	.next{
+		position:absolute;
+		top:0;
+		bottom:0;
+		right:0;
+		//float:left;
+		width:50%;
+		height:100%;
+	}
+
+}

@@ -55,8 +55,8 @@
                 <ul class="projects">
 
                     <!-- Energy Realities -->
-                    <li class="project clearfix">   	
-						<h2> Energy Realities  <span class="expand"> <a id="toggle-info"> + </a> </span> </h2>
+                    <li class="project">   	
+						<h2> National Geographic &mdash; Energy Realities  <span class="expand"> <a id="toggle-info"> + </a> </span> </h2>
 						
 						<div class="project-info">
 							<p> Website for National Geographic and Statoil about global energy consumption and production. Produced while working at Bluecadet. </p>
@@ -69,13 +69,24 @@
 							<h5> <a href="http://energyrealities.org"target=_blank>energyrealities.org &rarr; </a> </h5>
 						</div>
 						
-                        <div class="project-images">
-							<a href="http://energyrealities.org"target=_blank> 
-								<img src="images/projects/energyrealities/energyrealities-1.jpg"/>
-								<img src="images/projects/energyrealities/energyrealities-2.jpg"/>
-								<img src="images/projects/energyrealities/energyrealities-3.jpg"/>
-							</a> 
+						<div class="project-images">
+	                        
+							<div id="mySwipe" class="swipe"> <!-- project-images -->
+								<div class="swipe-wrap">
+									<div> <img src="images/projects/energyrealities/energyrealities-1.jpg"/> </div>
+									<div> <img src="images/projects/energyrealities/energyrealities-2.jpg"/>  </div>
+									<div> <img src="images/projects/energyrealities/energyrealities-3.jpg"/>  </div>
+								</div> <!-- End Wrap -->  
+							</div>
+						
+						    <div class="nontouchnav">
+								<div class="prev" onclick='mySwipe.prev()'>west</div> 
+						    	<div class="next" onclick='mySwipe.next()'>east</div>
+							</div>
+						
 						</div>
+						
+					    
 								
 					</li> 
                     <!-- /Energy Realities -->
@@ -249,6 +260,26 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		
+		<script src="js/swipe.js"></script>
+		<script>
+
+		// pure JS
+		var elem = document.getElementById('mySwipe');
+		window.mySwipe = Swipe(elem, {
+		  // startSlide: 4,
+		  // auto: 3000,
+		  // continuous: true,
+		  // disableScroll: true,
+		  // stopPropagation: true,
+		  // callback: function(index, element) {},
+		  // transitionEnd: function(index, element) {}
+		});
+
+		// with jQuery
+		// window.mySwipe = $('#mySwipe').Swipe().data('Swipe');
+
+		</script>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>

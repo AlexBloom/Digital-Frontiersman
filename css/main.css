@@ -205,6 +205,42 @@ figcaption {
   letter-spacing: .1em;
   line-height: 0em; }
 
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative; }
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative; }
+
+.swipe-wrap > div {
+  position: relative;
+  float: left;
+  width: 100%; }
+
+.nontouchnav {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  text-align: center; }
+  .nontouchnav .prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 100%; }
+  .nontouchnav .next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%; }
+
 body {
   background-color: white; }
 
@@ -297,9 +333,10 @@ header {
 small a {
   text-align: center; }
 
-.project-images img {
-  width: 100%;
-  padding: 2em 0; }
+.project-images {
+  position: relative; }
+  .project-images img {
+    width: 100%; }
 
 footer {
   float: left;
