@@ -87,22 +87,25 @@
 }
 
 a.closed {
+	transition:2s;
   
 }
 
 a.opened {
 	display:block;
 	font-size:1.1em;
+	
 	/* Safari */
-	-webkit-transform: rotate(-45deg);
+	-webkit-transform: rotateY(-180deg);
+	-webkit-transform: rotateZ(-45deg);
 
 	/* Firefox */
-	-moz-transform: rotate(-45deg);
+	-moz-transform: rotateZ(-45deg);
 
 	/* IE */
-	-ms-transform: rotate(-45deg);
+	-ms-transform: rotateZ(-45deg);
 
 	/* Opera */
-	-o-transform: rotate(-45deg);
+	-o-transform: rotateZ(-45deg);
 
 }
