@@ -67,7 +67,7 @@ textarea {
 @import "modules";
 
 body{
-	background-color: $light-grey;
+	background-color: $white;
 }
 
 ul{
@@ -79,6 +79,21 @@ ul{
 	}
 }
 
+a{
+	color:$black;
+	&:hover{
+		color:$dark-grey;
+	}
+	
+	&:active{
+		color:$black;
+	}
+	
+	&:visited{
+		color:$medium-grey;
+	}
+}
+
 label {
     float: left;
     text-align: right;
@@ -87,28 +102,67 @@ label {
 }
 
 header{
-    position:relative;
+    position:fixed;
+	top:0;
+	left:0;
+	right:0;
     float:left;
     width:100%;
     padding:0;
     margin:0;
-    @include drop-shadow;
+    
     }
+	
+	#primary{
+		ul{
+			
+		}
+		li{
+			float:right;
+			padding:1em;
+			text-align:center;
+		}
+	}
 
+	.logo{
+		font-size:12em;
+		color:$dark-grey;
+		text-align:center;
+		padding:0;
+		margin:.1em;
+	}
 
 //LAYOUT
 
 .content{
-	@media screen and (min-width: (em(1200))){
-		width:(em(1200));
+	@media screen and (min-width: (em(1400))){
+		width:(em(1400));
 		margin:0 auto;
 	}
 }
 
+#about{
+	padding:1em;
+	@media screen and (min-width: (em(900))){
+		width:(em(800));
+		margin:0 auto;
+	}
+	
+}
+
+.expand{
+	display:block;
+	float:right;
+	font-size:2em;
+	font-weight:200;
+}
+
 .project{	
-	border-bottom: 1px solid $light-grey;
 	background-color:$white;
-	padding:1em;	
+	padding:2em;
+	margin:2em 0;
+	border-top:1px solid $dark-grey;
+	//@include drop-shadow;	
 	}
 	
 .projects{
@@ -119,10 +173,14 @@ header{
 	
 .project-info{
 	padding:0 0 2em 0;
+	max-height:auto;
+	max-height:0;
+	overflow:hidden;
+	padding:0;
 
 	@media screen and (min-width: (em(1000))){
-		width:25%;
-		float:right;
+		//width:30%;
+		//float:right;
 	}
 
 }
@@ -136,8 +194,12 @@ header{
 		padding:.25em .75em;
 		background-color:$light-grey;
 		color:$dark-grey;
-		margin:.25em;
+		margin:0 .25em .25em 0;
+		@media screen and (min-width: (em(1000))){
+			//float:none;
+		}
 	}
+	
 }
 
 small{
@@ -151,13 +213,13 @@ small{
 
 	img{
 		width:100%;
-		padding:1em 0;
-		border-top:1px solid $light-grey;
+		padding:2em 0;
+		//border-top: 2px solid $dark-grey;
 	}
 	
 	@media screen and (min-width: (em(1000))){
-		width:65%;
-		float:left;
+		//width:65%;
+		//float:left;
 	}
 	
 }
@@ -169,6 +231,7 @@ footer{
     float:left;
     width:100%;
     text-align:center;
+	padding:2em 0;
 
 }
    

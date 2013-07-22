@@ -2,19 +2,19 @@
 
 
 @font-face {
-	font-family: 'Digital-Frontiersman';
-	src:url('../fonts/Digital-Frontiersman.eot');
-	src:url('../fonts/Digital-Frontiersman.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Digital-Frontiersman.woff') format('woff'),
-		url('../fonts/Digital-Frontiersman.ttf') format('truetype'),
-		url('../fonts/Digital-Frontiersman.svg#Digital-Frontiersman') format('svg');
+	font-family: 'DigitalFrontiersman';
+	src:url('../fonts/DigitalFrontiersman.eot');
+	src:url('../fonts/DigitalFrontiersman.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DigitalFrontiersman.woff') format('woff'),
+		url('../fonts/DigitalFrontiersman.ttf') format('truetype'),
+		url('../fonts/DigitalFrontiersman.svg#DigitalFrontiersman') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
-	font-family: 'Digital-Frontiersman';
+	font-family: 'DigitalFrontiersman';
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;
@@ -30,8 +30,8 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-facebook, .icon-twitter, .icon-tumblr, .icon-pinterest, .icon-instagram, .icon-arrow-down, .icon-arrow-up {
-	font-family: 'Digital-Frontiersman';
+.icon-twitter, .icon-instagram, .icon-DigitalFrontiersman, .icon-Mail {
+	font-family: 'DigitalFrontiersman';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -40,34 +40,24 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
-.icon-facebook:before {
-	content: "\22";
-}
 .icon-twitter:before {
-	content: "\23";
-}
-.icon-tumblr:before {
-	content: "\24";
-}
-.icon-pinterest:before {
-	content: "\25";
+	content: "\54";
 }
 .icon-instagram:before {
-	content: "\26";
+	content: "\67";
 }
-.icon-arrow-down:before {
-	content: "\27";
+.icon-DigitalFrontiersman:before {
+	content: "\4c";
 }
-.icon-arrow-up:before {
-	content: "\28";
+.icon-Mail:before {
+	content: "\24";
 }
-
 
 
 
 
 body{
-	font-family:"schoolbook-web" georgia, serif;
+	font-family:"PF DinText Pro" verdana, sans-serif;
 	line-height:1.75em;
 	font-size:1em;
 }
@@ -75,7 +65,7 @@ body{
 
 
 h1{
-font-family:"alternate-gothic-no-3-d", helvetica, arial, sans-serif;
+font-family:"PF DinText Pro", verdana, sans-serif;
 font-weight:700;
 text-align:center;
 text-transform:uppercase;
@@ -87,31 +77,40 @@ line-height:1.75em;
 	@media screen and (min-width:(em(800))){
 		font-size:2.5em;
 	}
-
+	
 }
 
 h2{
-font-family:"alternate-gothic-no-3-d", helvetica, arial, sans-serif;
+font-family:"PF DinText Pro", verdana, sans-serif;
 font-weight:700;
 text-align:center;
 text-transform:uppercase;
+margin-top:0;
 letter-spacing:.1em;
 
 	@media screen and (min-width:(em(800))){
 		font-size:2em;
 	}
+	
+	@media screen and (min-width:(em(1000))){
+		font-size:1.5em;
+		text-align:left;
+	}
+	
 
 }
 
 h3{
-font-family:"alternate-gothic-no-3-d", helvetica, arial, sans-serif;
+font-family:"alternate-gothic-no-3-d", verdana, sans-serif;
 font-weight:800;
+font-size:1em;
 text-transform:uppercase;
 letter-spacing:.1em;
 }
 
 h4{
 font-weight:600;
+text-align:center;
 }
 
 h5{
@@ -134,11 +133,12 @@ p{
 
 p.intro{
 	font-size:1.25em;
-	font-weight:500;
+	font-weight:400;
 	line-height:1.5em;
 	
 	@media screen and (min-width:(em(800))){
-		font-size:1.5em;
+		font-size:1.35em;
+		
 	}
 
 }
