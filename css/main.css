@@ -225,21 +225,40 @@ figcaption {
   top: 0;
   width: 100%;
   z-index: 1000;
-  text-align: center; }
+  text-align: center;
+  font-size: 1.5em; }
   .nontouchnav .prev {
     position: absolute;
     top: 0;
     bottom: 0;
     left: -2em;
-    width: 50%;
-    height: 100%; }
+    background-color: #eee;
+    margin: 25% .5em 0 .5em;
+    padding: .1em 0 0 0;
+    height: 1.1em;
+    width: 1.25em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    border-radius: 1em;
+    cursor: pointer; }
   .nontouchnav .next {
     position: absolute;
     top: 0;
     bottom: 0;
     right: -2em;
-    width: 50%;
-    height: 100%; }
+    background-color: #eee;
+    margin: 25% .5em 0 .5em;
+    padding: .1em 0 0 0;
+    height: 1.1em;
+    width: 1.25em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    border-radius: 1em;
+    cursor: pointer; }
 
 /* responsive-nav.js v1.0.15 by @viljamis */
 .js #info-1 {
@@ -347,7 +366,7 @@ header {
   border-top: 1px solid #444444; }
 
 .projects {
-  padding: 1em; }
+  padding: 1em 3em; }
 
 .project-info {
   max-height: auto;

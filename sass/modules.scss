@@ -24,25 +24,40 @@
 	width:100%;
 	z-index:1000;
 	text-align:center;
+	font-size:1.5em;
+	
+	
 
 	.prev{
-		position:absolute;
-		top:0;
-		bottom:0;
-		left:-2em;
-		//float:left;
-		width:50%;
-		height:100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -2em;
+		//width: 2em;
+		//height: 55%;
+		background-color: #eee;
+		margin:25% .5em 0 .5em;
+		padding:.1em 0 0 0;
+		height:1.1em;
+		width:1.25em;
+		@include one-em-border-radius;
+		cursor:pointer;
 	}
 	
 	.next{
-		position:absolute;
-		top:0;
-		bottom:0;
-		right:-2em;
-		//float:left;
-		width:50%;
-		height:100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: -2em;
+		//width: 2em;
+		//height: 55%;
+		background-color: #eee;
+		margin:25% .5em 0 .5em;
+		padding:.1em 0 0 0;
+		height:1.1em;
+		width:1.25em;
+		@include one-em-border-radius;
+		cursor:pointer;
 	}
 
 }
