@@ -135,8 +135,8 @@ header{
 //LAYOUT
 
 .content{
-	@media screen and (min-width: (em(1400))){
-		width:(em(1400));
+	@media screen and (min-width: (em(1200))){
+		width:(em(1200));
 		margin:0 auto;
 	}
 }
@@ -159,20 +159,19 @@ header{
 
 .project{	
 	background-color:$white;
-	padding:2em;
+	padding:2em 0;
 	margin:2em 0;
 	border-top:1px solid $dark-grey;
 	//@include drop-shadow;	
 	}
 	
 .projects{
-	padding:1em;
+	padding:1em 3em;
 	}
 	
 	
 	
 .project-info{
-	padding:0 0 2em 0;
 	max-height:auto;
 	max-height:0;
 	overflow:hidden;
@@ -210,10 +209,11 @@ small{
 		
 	
 .project-images{
+	position:relative;
 
 	img{
 		width:100%;
-		padding:2em 0;
+		//padding:2em 0;
 		//border-top: 2px solid $dark-grey;
 	}
 	
