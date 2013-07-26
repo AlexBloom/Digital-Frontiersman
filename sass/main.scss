@@ -110,6 +110,8 @@ header{
     width:100%;
     padding:0;
     margin:0;
+	background-color:white;
+	z-index:9999;
     
     }
 	
@@ -118,10 +120,16 @@ header{
 			
 		}
 		li{
-			float:right;
+			float:left;
 			padding:1em;
 			text-align:center;
 		}
+	}
+	#email{
+		float:left;
+	}
+	#links{
+		float:right;
 	}
 
 	.logo{
@@ -135,9 +143,11 @@ header{
 //LAYOUT
 
 .content{
-	@media screen and (min-width: (em(1200))){
-		width:(em(1200));
+	padding:2em 0 0 0;
+	@media screen and (min-width: (em(1000))){
+		width:(em(1000));
 		margin:0 auto;
+		
 	}
 }
 
@@ -159,14 +169,14 @@ header{
 
 .project{	
 	background-color:$white;
-	padding:2em 0;
+	padding:2em 0 0 0;
 	margin:2em 0;
-	border-top:1px solid $dark-grey;
+	border-top:4px solid $dark-grey;
 	//@include drop-shadow;	
 	}
 	
 .projects{
-	padding:1em 3em;
+	padding:0 3em 1em 3em;
 	}
 	
 	
