@@ -111,11 +111,13 @@ header{
     padding:0;
     margin:0;
 	background-color:white;
-	z-index:9999;
+	z-index:5000;
     
     }
 	
 	#primary{
+	
+		font-weight:bold;
 		ul{
 			
 		}
@@ -132,32 +134,45 @@ header{
 		float:right;
 	}
 
-	.logo{
-		font-size:12em;
-		color:$dark-grey;
-		text-align:center;
-		padding:0;
-		margin:.1em;
-	}
-
 //LAYOUT
 
 .content{
-	padding:2em 0 0 0;
-	@media screen and (min-width: (em(1000))){
-		width:(em(1000));
-		margin:0 auto;
-		
-	}
+	padding:0;
+	margin:3em 0 0 0;
+	
 }
 
 #about{
-	padding:1em;
+	//color:$white;
+	padding:5em 1.5em;
+	background:url(../images/header/header.jpg);
+	background-size:cover;
+	background-position:center;	
+}
+
+.logo{
+	font-size:15em;
+	text-align:center;
+	padding:0;
+	margin:.1em;
+}
+
+#introtext{
 	@media screen and (min-width: (em(900))){
 		width:(em(800));
 		margin:0 auto;
 	}
-	
+}
+
+#caption{
+	float:right;
+}
+
+#portfolio{
+	position:relative;
+	background-color:$white;
+	padding:1em 0 0 0;
+	z-index:9999;
 }
 
 .expand{
@@ -167,17 +182,26 @@ header{
 	font-weight:200;
 }
 
+.projects{
+	padding:0 0 1em 0;
+	
+		@media screen and (min-width: (em(1000))){
+			width:(em(1000));
+			margin:0 auto;
+		
+		}
+	
+	}
+
 .project{	
-	background-color:$white;
-	padding:2em 0 0 0;
+	//background-color:$white;
+	padding:1.5em 0 0 0;
 	margin:2em 0;
-	border-top:4px solid $dark-grey;
+	border-top:1px dotted $dark-grey;
 	//@include drop-shadow;	
 	}
 	
-.projects{
-	padding:0 3em 1em 3em;
-	}
+
 	
 	
 	
@@ -237,11 +261,12 @@ small{
 	
 	
 
-footer{
+#footer{
     float:left;
     width:100%;
     text-align:center;
 	padding:2em 0;
+	background-color:$light-grey;
 
 }
    
