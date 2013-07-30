@@ -99,12 +99,11 @@ you can use the generic selector below, but it's slower:
   content: "\24"; }
 
 body {
-  font-family: "PF DinText Pro" verdana, sans-serif;
+  font-family: "Proxima Nova" verdana, sans-serif;
   line-height: 1.75em;
   font-size: 1em; }
 
 h1 {
-  font-family: "PF DinText Pro", verdana, sans-serif;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -116,7 +115,6 @@ h1 {
       font-size: 2.5em; } }
 
 h2 {
-  font-family: "PF DinText Pro", verdana, sans-serif;
   font-size: 1em;
   font-weight: 700;
   text-align: left;
@@ -221,36 +219,44 @@ figcaption {
   position: absolute;
   bottom: 0;
   top: 0;
+  padding: .25em 0;
   width: 100%;
   z-index: 1000;
   text-align: center;
   font-size: 1.5em;
-  display: none; }
+  overflow: hidden; }
   @media screen and (min-width: 62.5em) {
     .nontouchnav {
       display: block; } }
+  .nontouchnav div {
+    position: absolute;
+    color: #656565;
+    width: 3em;
+    cursor: pointer;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    padding-top: 27%;
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 0;
+    -webkit-transition-duration: .25s;
+    -moz-transition-duration: .25s;
+    -ms-transition-duration: .25s;
+    -o-transition-duration: .25s;
+    transition-duration: .25s; }
+    .nontouchnav div:hover {
+      background-color: rgba(255, 255, 255, 0.75);
+      opacity: 0.75;
+      color: black;
+      -webkit-transition-duration: .25s;
+      -moz-transition-duration: .25s;
+      -ms-transition-duration: .25s;
+      -o-transition-duration: .25s;
+      transition-duration: .25s; }
   .nontouchnav .prev {
-    color: #eeeeee;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -8em;
-    width: 12em;
-    padding: 26% 0 0 0;
-    cursor: pointer; }
-    .nontouchnav .prev:hover {
-      color: #656565; }
+    left: 0; }
   .nontouchnav .next {
-    color: #eeeeee;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -8em;
-    width: 12em;
-    padding: 26% 0 0 0;
-    cursor: pointer; }
-    .nontouchnav .next:hover {
-      color: #656565; }
+    right: 0; }
 
 /* responsive-nav.js v1.0.15 by @viljamis */
 .js #info-1 {
@@ -313,19 +319,25 @@ label {
   width: 6.25em; }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  float: left;
+  position: relative;
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: white;
-  z-index: 5000; }
+  background-color: white; }
+  @media screen and (min-width: 56.25em) {
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5000; } }
 
 #primary {
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: .75em; }
+  @media screen and (min-width: 56.25em) {
+    #primary {
+      font-size: 1em; } }
   #primary li {
     float: left;
     padding: 1em;
@@ -339,19 +351,30 @@ header {
 
 .content {
   padding: 0;
-  margin: 3em 0 0 0; }
+  margin: 0; }
 
 #about {
   padding: 5em 1.5em;
-  background: url(../images/header/header.jpg);
-  background-size: cover;
-  background-position: center; }
+  background-color: #eeeeee;
+  position: relative; }
 
 .logo {
-  font-size: 15em;
+  font-size: 11em;
   text-align: center;
   padding: 0;
-  margin: .1em; }
+  background: url(../images/header/header.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 12em;
+  margin: 0 auto 0.25em auto; }
+  @media screen and (min-width: 56.25em) {
+    .logo {
+      font-size: 15em; } }
+  .logo span {
+    display: block;
+    padding-top: .35em; }
 
 @media screen and (min-width: 56.25em) {
   #introtext {
@@ -359,7 +382,9 @@ header {
     margin: 0 auto; } }
 
 #caption {
-  float: right; }
+  position: absolute;
+  right: 1em;
+  bottom: 1em; }
 
 #portfolio {
   position: relative;
@@ -383,19 +408,34 @@ header {
 .project {
   padding: 1.5em 0 0 0;
   margin: 2em 0;
-  border-top: 1px dotted #252525; }
+  border-top: 1px dotted #252525;
+  position: relative; }
+  .project h2 {
+    padding-right: 10%; }
+
+.toggle {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: .75em .25em;
+  text-align: right;
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none; }
 
 .project-info {
-  max-height: auto;
-  max-height: 0;
-  overflow: hidden;
-  padding: 0; }
+  padding: 0 1em;
+  margin: 0; }
+  @media screen and (min-width: 62.5em) {
+    .project-info {
+      padding: 0; } }
 
 .project-details li {
   float: left; }
 .project-details .tag {
   display: block;
-  padding: .25em .75em;
+  padding: .25em .75em .25em .75em;
   background-color: #eeeeee;
   color: #252525;
   margin: 0 .25em .25em 0; }

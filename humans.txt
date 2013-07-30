@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    <Alex Bloom> -- <all of it> -- <@alexbloom>
 
 # THANKS
 
-    <name>
+    <Brad Birdsall>
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     jQuery, Modernizr
+	Swipe.js

@@ -18,58 +18,49 @@
 }
 
 .nontouchnav{
-	position:absolute;
-	bottom:0;
+	position: absolute;
+	bottom: 0;
 	top:0;
-	width:100%;
-	z-index:1000;
-	text-align:center;
-	font-size:1.5em;
-	display:none;
+	padding: .25em 0;
+	width: 100%;
+	z-index: 1000;
+	text-align: center;
+	font-size: 1.5em;
+	overflow: hidden;
 	
 	@media screen and (min-width:(em(1000))){
 		display:block;
 	}
 	
-
-	.prev{
-		color:$light-grey;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: -8em;
-		width: 12em;
-		//height: 55%;
-		//background-color: #eee;
-		padding:26% 0 0 0;
-		//padding:.1em 0 0 0;
-		//height:1.1em;
-		//width:5em;
-		//@include one-em-border-radius;
+	div{
+		position:absolute;
+		color:$medium-grey;
+		width: 3em;
 		cursor:pointer;
+		text-align:center;
+		top:0;
+		bottom:0;
+		padding-top:27%;
+		
+		background-color: rgba(255,255,255,0);
+		opacity:0;
+		@include quarter-second-transition;
+		
 		&:hover{
-			color:$medium-grey;
+			background-color: rgba(255,255,255,0.75);
+			opacity:0.75;
+			color:$black;
+			@include quarter-second-transition;
 		}
+	}
+
+	.prev{		
+		left:0;
 	}
 	
 	.next{
-		color:$light-grey;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: -8em;
-		width: 12em;
-		//height: 55%;
-		//background-color: #eee;
-		padding:26% 0 0 0;
-		//padding:.1em 0 0 0;
-		//height:1.1em;
-		//width:5em;
-		//@include one-em-border-radius;
-		cursor:pointer;
-		&:hover{
-			color:$medium-grey;
-		}
+		right:0;
+		//border-left:1px dotted $medium-grey;
 	}
 
 }
