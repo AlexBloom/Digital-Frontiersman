@@ -99,7 +99,7 @@ you can use the generic selector below, but it's slower:
   content: "\24"; }
 
 body {
-  font-family: "Proxima Nova" verdana, sans-serif;
+  font-family: "proxima-nova" verdana, sans-serif;
   line-height: 1.75em;
   font-size: 1em; }
 
@@ -162,7 +162,6 @@ blockquote {
   line-height: 175%;
   font-size: 1.15em;
   float: left;
-  font-family: "chaparral-pro", serif;
   font-style: italic;
   font-weight: 400;
   padding: 0 0 0 2em;
@@ -172,7 +171,6 @@ blockquote {
       font-size: 1.25em; } }
 
 blockquote:before {
-  font-family: "chaparral-pro", serif;
   content: "\201c";
   font-size: 5em;
   text-indent: -1.25em;
@@ -246,7 +244,7 @@ figcaption {
     transition-duration: .25s; }
     .nontouchnav div:hover {
       background-color: rgba(255, 255, 255, 0.75);
-      opacity: 0.75;
+      opacity: 0.5;
       color: black;
       -webkit-transition-duration: .25s;
       -moz-transition-duration: .25s;
@@ -354,27 +352,21 @@ header {
   margin: 0; }
 
 #about {
-  padding: 5em 1.5em;
-  background-color: #eeeeee;
+  padding: 1em 1.5em;
+  background: url(../images/header/texture.png);
   position: relative; }
 
 .logo {
   font-size: 11em;
   text-align: center;
   padding: 0;
-  background: url(../images/header/header.jpg);
-  background-size: cover;
-  background-position: center;
-  width: 1.75em;
-  height: 1.75em;
-  border-radius: 12em;
-  margin: 0 auto 0.25em auto; }
+  width: 100%; }
   @media screen and (min-width: 56.25em) {
     .logo {
       font-size: 15em; } }
   .logo span {
     display: block;
-    padding-top: .35em; }
+    padding: .1em 0; }
 
 @media screen and (min-width: 56.25em) {
   #introtext {

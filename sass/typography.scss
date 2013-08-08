@@ -58,7 +58,7 @@ you can use the generic selector below, but it's slower:
 
 body{
 	//"PF DinText Pro"
-	font-family:"Proxima Nova" verdana, sans-serif;
+	font-family:"proxima-nova" verdana, sans-serif;
 	line-height:1.75em;
 	font-size:1em;
 }
@@ -161,8 +161,7 @@ blockquote{
 	font-style:italic; 
 	line-height:175%; 
 	font-size:1.15em; 
-	float:left; 
-	font-family:"chaparral-pro", serif; 
+	float:left;  
 	font-style:italic; 
 	font-weight:400; 
 	padding: 0 0 0 2em; 
@@ -175,7 +174,6 @@ blockquote{
 }
 
 blockquote:before{
-	font-family:"chaparral-pro", serif;
 	content:"\201c";
 	font-size:5em;
 
