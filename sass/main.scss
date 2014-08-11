@@ -67,7 +67,7 @@ textarea {
 @import "modules";
 
 body{
-	background-color: $white;
+	background:url('../images/header/texture.jpg');
 }
 
 ul{
@@ -161,10 +161,27 @@ header{
 
 #about{
 	//color:$white;
-	padding:1em 1.5em;
-	background:url(../images/header/texture.png);
-	position:relative;
 	
+	background:url(../images/header/office_view.jpg);
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
+	
+	.fade{
+		position:relative;
+		padding:1em 1.5em;
+		background-color:rgba(255, 255, 255, 0);
+		@include quarter-second-transition;
+	}
+	
+	&:hover{
+		.fade{
+			background-color:rgba(255, 255, 255, .5);
+			@include quarter-second-transition;
+		}
+	}
+	
+
 }
 
 .logo{
@@ -201,7 +218,7 @@ header{
 #portfolio{
 	position:relative;
 	background-color:$white;
-	padding:1em 0 0 0;
+	padding:1em 0 2em 0;
 	z-index:9999;
 }
 
@@ -227,7 +244,7 @@ header{
 	//background-color:$white;
 	padding:1.5em 0 0 0;
 	margin:2em 0;
-	border-top:1px dotted $dark-grey;
+	border-top:2px solid $dark-grey;
 	position:relative;
 	//@include drop-shadow;	
 	
@@ -237,17 +254,23 @@ header{
 	
 	}
 	
+	.client{
+		font-style:italic;
+		font-weight:200;
+		text-transform:capitalize;
+	}
 
 	.toggle{
 		display: block;
 		position: absolute;
 		right: 0;
 		top: 0;
-		padding: .75em .25em;
+		padding: 1.5em 0.25em;
 		text-align: right;
-		font-weight: bold;
-		font-size: 2em;
+		font-weight: 200;
+		font-size: 1em;
 		text-decoration: none;
+		text-transform:uppercase;
 	}
 	
 	
@@ -272,10 +295,14 @@ header{
 	}
 	.tag{
 		display:block;
-		padding:.25em .75em .25em .75em;
-		background-color:$light-grey;
+		margin:.25em 1.5em .25em 0em;
+		//background-color:$light-grey;
 		color:$dark-grey;
-		margin:0 .25em .25em 0;
+		//margin:0 .25em .25em 0;
+		border-bottom: 1px dotted $dark-grey;
+		&:after{
+			
+		}
 		
 		@media screen and (min-width: (em(1000))){
 			//float:none;
@@ -294,6 +321,8 @@ small{
 	
 .project-images{
 	position:relative;
+	padding:2em 1em 0;
+	border-top:1px dotted $medium-grey;
 
 	img{
 		width:100%;

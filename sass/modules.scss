@@ -1,5 +1,9 @@
 // MODULES
 
+.red{
+	color:$red;
+}
+
 // Swipe Classes
 
 .swipe {
@@ -18,11 +22,10 @@
 }
 
 .nontouchnav{
-	position: absolute;
-	bottom: 0;
-	top:0;
+	position: relative;
 	padding: .25em 0;
 	width: 100%;
+	height:3em;
 	z-index: 1000;
 	text-align: center;
 	font-size: 1.5em;
@@ -34,25 +37,27 @@
 	
 	div{
 		position:absolute;
-		color:$medium-grey;
-		width: 1.5em;
-		cursor:pointer;
-		text-align:center;
 		top:0;
-		bottom:0;
-		padding-top:27%;
-		
-		background-color: rgba(255,255,255,0);
-		opacity:0;
+		padding:.5em 0;
+		//padding-top:27%;
+		width: 50%;
+		font-size:1.25em;
+		cursor:pointer;
+		text-align:center;	
+		opacity:0.25;
+		background-color: $white;
+		color:$dark-grey;
+		border-bottom:1px dotted $medium-grey;
+
 		@include quarter-second-transition;
 		
 		&:hover{
-			background-color: rgba(255,255,255,0.75);
-			opacity:0.5;
+			opacity:1!important;
 			color:$black;
 			@include quarter-second-transition;
 		}
 	}
+	
 
 	.prev{		
 		left:0;
